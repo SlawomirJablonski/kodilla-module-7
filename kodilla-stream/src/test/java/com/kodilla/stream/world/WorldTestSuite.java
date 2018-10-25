@@ -6,6 +6,7 @@ import org.junit.Assert;
 import java.math.BigDecimal;
 
 public class WorldTestSuite {
+
     @Test
     public void testGetPeopleQuantity() {
         Country poland = new Country(BigDecimal.valueOf(38476269L));

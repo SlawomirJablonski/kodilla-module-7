@@ -25,5 +25,4 @@ public class Continent {
     public int hashCode() {
         return countries.hashCode();
     }
-
 }
