@@ -27,5 +27,4 @@ public final class Country {
     public int hashCode() {
         return peopleQuantity.hashCode();
     }
-
 }
