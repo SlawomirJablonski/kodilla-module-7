@@ -18,6 +18,5 @@ public interface ArrayOperations {
         return average;
 
     }
-
 }
 
