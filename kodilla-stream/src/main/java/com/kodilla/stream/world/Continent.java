@@ -28,4 +28,3 @@ public class Continent {
         return countries.hashCode();
     }
 }
-

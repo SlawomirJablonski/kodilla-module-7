@@ -20,4 +20,3 @@ public class World {
         return peopleQuantity;
     }
 }
-
