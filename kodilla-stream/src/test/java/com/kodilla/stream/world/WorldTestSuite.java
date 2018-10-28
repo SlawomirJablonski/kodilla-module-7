@@ -1,3 +1,4 @@
+
 package com.kodilla.stream.world;
 
 import org.junit.Test;
@@ -45,5 +46,6 @@ public class WorldTestSuite {
         int testPeopleQuantity = 38476269+10839514+1281935911+124574795+260580739+190632261+25054161+94731;
         BigDecimal expectedResult = new BigDecimal(testPeopleQuantity);
         Assert.assertEquals(expectedResult, testResult);
+
     }
 }
