@@ -24,4 +24,3 @@ public class ArrayOperationsTestSuite {
         Assert.assertEquals(expectedAverage,result,0);
     }
 }
-
