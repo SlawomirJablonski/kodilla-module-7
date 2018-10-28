@@ -1,3 +1,4 @@
+
 package com.kodilla.stream.world;
 
 import org.junit.Test;
