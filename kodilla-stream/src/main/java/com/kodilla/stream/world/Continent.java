@@ -1,4 +1,3 @@
-
 package com.kodilla.stream.world;
 
 import java.util.HashSet;
@@ -26,5 +25,4 @@ public class Continent {
     public int hashCode() {
         return countries.hashCode();
     }
-
 }

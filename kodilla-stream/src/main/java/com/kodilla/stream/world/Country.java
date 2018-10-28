@@ -1,4 +1,3 @@
-
 package com.kodilla.stream.world;
 
 import java.math.BigDecimal;
@@ -28,5 +27,4 @@ public final class Country {
     public int hashCode() {
         return peopleQuantity.hashCode();
     }
-
 }
