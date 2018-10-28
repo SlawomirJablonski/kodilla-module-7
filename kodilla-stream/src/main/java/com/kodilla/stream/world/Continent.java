@@ -1,5 +1,3 @@
-//what
-
 package com.kodilla.stream.world;
 
 import java.util.HashSet;
