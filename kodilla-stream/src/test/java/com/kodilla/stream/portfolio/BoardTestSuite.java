@@ -135,17 +135,19 @@ public class BoardTestSuite {
     }
     @Test
     public void testAddTaskListAverageWorkingOnTask() {
+
         //Given
         Board project = prepareTestData();
 
         //When
         List<TaskList> inProgressTasks = new ArrayList<>();
         inProgressTasks.add(new TaskList("In progress"));
+        LocalDate nowDate = LocalDate.now();
 
         long sumOfDaysInProgress = project.getTaskLists().stream()
                 .filter(inProgressTasks::contains)
                 .flatMap(tl -> tl.getTasks().stream())
-                .map(t -> DAYS.between(t.getCreated(), LocalDate.now()))
+                .map(t -> DAYS.between(t.getCreated(), nowDate))
                 .reduce(Long.valueOf(0), (sum, current)->sum+=current );
 
         long taskQuantity = project.getTaskLists().stream()
@@ -154,6 +156,27 @@ public class BoardTestSuite {
                 .count();
 
         double average = (double)sumOfDaysInProgress/taskQuantity;
+
+        //Then
+        Assert.assertEquals(10.0,average,0);
+
+    }
+    @Test
+    public void testAddTaskListAverageWorkingOnTaskWitAverage() {
+        //Given
+        Board project = prepareTestData();
+
+        //When
+        List<TaskList> inProgressTasks = new ArrayList<>();
+        inProgressTasks.add(new TaskList("In progress"));
+        LocalDate nowDate = LocalDate.now();
+
+        double average = project.getTaskLists().stream()
+                .filter(inProgressTasks::contains)
+                .flatMap(tl -> tl.getTasks().stream())
+                .mapToDouble(t -> DAYS.between(t.getCreated(), nowDate))
+                .average()
+                .getAsDouble();
 
         //Then
         Assert.assertEquals(10.0,average,0);
