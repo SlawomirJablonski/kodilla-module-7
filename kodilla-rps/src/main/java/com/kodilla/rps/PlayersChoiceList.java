@@ -7,19 +7,19 @@ public class PlayersChoiceList {
     private final List<PlayersChoice> theList = new ArrayList<>();
     public PlayersChoiceList(){
         //status for draw
-        theList.add(new PlayersChoice(1, 1, 0));
-        theList.add(new PlayersChoice(2, 2, 0));
-        theList.add(new PlayersChoice(3, 3, 0));
+        theList.add(new PlayersChoice(Choice.ROCK, Choice.ROCK, "DRAW"));
+        theList.add(new PlayersChoice(Choice.PAPER, Choice.PAPER, "DRAW"));
+        theList.add(new PlayersChoice(Choice.SCISSORS, Choice.SCISSORS, "DRAW"));
 
         //when one wins
-        theList.add(new PlayersChoice(1, 2, 10));
-        theList.add(new PlayersChoice(2, 1, 5));
+        theList.add(new PlayersChoice(Choice.ROCK, Choice.PAPER, "PCWIN"));
+        theList.add(new PlayersChoice(Choice.PAPER, Choice.ROCK, "PLAYERWIN"));
 
-        theList.add(new PlayersChoice(2, 3, 10));
-        theList.add(new PlayersChoice(3, 2, 5));
+        theList.add(new PlayersChoice(Choice.PAPER, Choice.SCISSORS, "PCWIN"));
+        theList.add(new PlayersChoice(Choice.SCISSORS, Choice.PAPER, "PLAYERWIN"));
 
-        theList.add(new PlayersChoice(1, 3, 5));
-        theList.add(new PlayersChoice(3, 1, 10));
+        theList.add(new PlayersChoice(Choice.ROCK, Choice.SCISSORS, "PLAYERWIN"));
+        theList.add(new PlayersChoice(Choice.SCISSORS, Choice.ROCK, "PCWIN"));
     }
     public List<PlayersChoice> getTheList(){
         return new ArrayList<>(theList);

@@ -1,25 +1,25 @@
 package com.kodilla.rps;
 
 public class PlayersChoice {
-    public int userMove;
-    public int pcMove;
-    public int roundResult;
+    public Choice userMove;
+    public Choice pcMove;
+    public String roundResult;
 
-    public PlayersChoice(int userMove, int pcMove, int roundResult) {
+    public PlayersChoice(Choice userMove, Choice pcMove, String roundResult) {
         this.userMove = userMove;
         this.pcMove = pcMove;
         this.roundResult = roundResult;
     }
 
-    public int getUserMove() {
+    public Choice getUserMove() {
         return userMove;
     }
 
-    public int getPcMove() {
+    public Choice getPcMove() {
         return pcMove;
     }
 
-    public int getRoundResult() {
+    public String getRoundResult() {
         return roundResult;
     }
 }
