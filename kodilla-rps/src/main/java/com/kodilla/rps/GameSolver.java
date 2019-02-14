@@ -1,7 +1,6 @@
 package com.kodilla.rps;
 
 import java.util.List;
-import java.util.Scanner;
 
 public class GameSolver {
 

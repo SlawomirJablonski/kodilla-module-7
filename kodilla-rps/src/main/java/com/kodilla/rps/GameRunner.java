@@ -7,12 +7,11 @@ public class GameRunner {
 
     public static void main(String[] args) {
 
-        Scanner decisionScanner = new Scanner(System.in);
-        boolean playing = true;
-        while (playing) {
+        Scanner scanner;
+        GameConfiguration configuration = new GameConfiguration();
+        while (!configuration.end) {
 
-            Scanner scanner = new Scanner(System.in);
-            GameConfiguration configuration = new GameConfiguration();
+            scanner = new Scanner(System.in);
             System.out.println("Welcome in rock-paper-scissors game!");
             System.out.println("Write Your user name");
             String name = scanner.nextLine();
@@ -101,8 +100,9 @@ public class GameRunner {
 
             configuration.finalResult();
             System.out.println("Do you wish to play again? Y/N");
-            String answer = decisionScanner.nextLine();
-            playing = answer.equalsIgnoreCase("y");
+            scanner = new Scanner(System.in);
+            String answer = scanner.nextLine();
+            configuration.end = !answer.equalsIgnoreCase("y");
 
         }
     }
