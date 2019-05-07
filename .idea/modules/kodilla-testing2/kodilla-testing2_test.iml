@@ -3,7 +3,9 @@
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
     <output-test url="file://$MODULE_DIR$/../../../kodilla-testing2/out/test/classes" />
     <exclude-output />
-    <content url="file://$MODULE_DIR$/../../../kodilla-testing2/src/test" />
+    <content url="file://$MODULE_DIR$/../../../kodilla-testing2/src/test">
+      <sourceFolder url="file://$MODULE_DIR$/../../../kodilla-testing2/src/test/java" isTestSource="true" />
+    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="kodilla-testing2_main" />
